@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "InputAction.h"
 #include "GameFramework/PlayerController.h"
+#include "Interaction/EnemyInterface.h"
 #include "RPGPlayerController.generated.h"
 
 class UInputMappingContext;
@@ -18,8 +19,10 @@ class AURA_API ARPGPlayerController : public APlayerController
 	GENERATED_BODY()
 public:
 	ARPGPlayerController();
+	void PlayerTick(float DeltaTime) override;
 protected:
 	virtual  void BeginPlay() override;
+	
 	virtual void SetupInputComponent() override;
 	
 private:
@@ -31,4 +34,8 @@ private:
 
 	UFUNCTION()
 	void Move(const FInputActionValue& InputActionValue);
+
+	void CursorTrace();
+	IEnemyInterface* LastActor;
+	IEnemyInterface* ThisActor;
 };

@@ -10,7 +10,6 @@ ARPGCharacter::ARPGCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement=true;
 	GetCharacterMovement()->RotationRate=FRotator(0,400.f,0);
 	GetCharacterMovement()->bConstrainToPlane=true;
-	GetCharacterMovement()->SnapUpdatedComponentToPlane();
 	GetCharacterMovement()->bSnapToPlaneAtStart=true;
 
 	bUseControllerRotationPitch=false;
