@@ -13,5 +13,6 @@ UCLASS()
 class AURA_API ARPGCharacter : public ARPGCharacterBase
 {
 	GENERATED_BODY()
-	
+public:
+	ARPGCharacter();
 };
