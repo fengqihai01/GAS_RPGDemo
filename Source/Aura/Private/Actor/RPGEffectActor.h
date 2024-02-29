@@ -19,7 +19,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleAnywhere)
-	TObjectPtr<UStaticMeshComponent> StaticMesh;g
+	TObjectPtr<UStaticMeshComponent> StaticMesh;
 	
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<USphereComponent> Sphere;
