@@ -33,4 +33,11 @@ void AEnemyCharacter::UnHighLightActor()
 	Weapon->SetRenderCustomDepth(false);
 }
 
+void AEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	AbilitySystemComponent->InitAbilityActorInfo(this,this);
+}
+	
+
 
