@@ -1,11 +1,10 @@
 // CopyRight FQH Demo
 
 
-#include "RPGUserWidget.h"
-
+#include "UI/UserWidget/RPGUserWidget.h"
 
 void URPGUserWidget::SetWidgetController(UObject* InWidgetController)
 {
-	WidgetController=InWidgetController;
+	WidgetController = InWidgetController;
 	OnWidgetControllerSet();
 }

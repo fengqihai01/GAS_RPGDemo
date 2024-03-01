@@ -14,6 +14,8 @@ UCLASS()
 class AURA_API URPGWidgetController : public UObject
 {
 	GENERATED_BODY()
+public:
+	
 protected:
 	UPROPERTY(BlueprintReadOnly,Category="WidgetController")
 	TObjectPtr<APlayerController> PlayerController;
@@ -25,6 +27,5 @@ protected:
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
 	UPROPERTY(BlueprintReadOnly,Category="WidgetController")
-	TObjectPtr<UAttributeSet> AttributeSet;
-	
+	TObjectPtr<UAttributeSet>  AttributeSet;
 };
