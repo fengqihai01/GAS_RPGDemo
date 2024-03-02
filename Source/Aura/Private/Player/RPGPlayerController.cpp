@@ -26,8 +26,12 @@ void ARPGPlayerController::BeginPlay()
 	UE_LOG(LogTemp,Log,TEXT("111"));
 	check(RPGInputContext);
 	UEnhancedInputLocalPlayerSubsystem * EnhanchedSubsystem=ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
-	check(EnhanchedSubsystem);
-	EnhanchedSubsystem->AddMappingContext(RPGInputContext,0);
+	if (EnhanchedSubsystem)
+	{
+		EnhanchedSubsystem->AddMappingContext(RPGInputContext,0);
+
+	}
+	
 	
 	SetShowMouseCursor(true);
 	FInputModeGameAndUI InputModeData;
